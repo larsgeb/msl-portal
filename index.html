@@ -38,14 +38,19 @@
         <div class="twelve columns value-prop">
           <div class="row">
             <div class="twelve columns">
-              <h6>Seamless GPU acceleration for C++ based physics using unified processing units: A case study using
-                elastic wave propagation and full-waveform inversion</h6>
+              <h6><b>Seamless GPU acceleration for C++ based physics using unified processing units:</b></br>A case
+                study
+                using
+                elastic wave propagation and PDE-constrained optimization</h6>
             </div>
+            <div class="twelve columns">May 2022</div>
           </div>
           </br>
           <div class="row">
             <div class="six columns">Lars Gebraad</div>
             <div class="six columns">Andreas Fichtner</div>
+            <div class="twelve columns" style="margin-top: 20px;">Seismology and Wave Physics</br>ETH Zürich
+            </div>
           </div>
         </div>
         <div class="three columns value-prop"> </div>
@@ -53,15 +58,57 @@
 
       <div class="value-props row">
         <div class="four columns value-prop">
-          ArXiv Preprint
+          <a href="https://github.com/larsgeb/psvWave">ArXiv Preprint</a>
         </div>
         <div class="four columns value-prop">
-          Basic operations
+          <a href="https://github.com/larsgeb/psvWave">Basic operations</a>
         </div>
         <div class="four columns value-prop">
           <a href="https://github.com/larsgeb/psvWave">Elastic wave propagation</a></br>
         </div>
       </div>
+
+      <div class="value-props row">
+        <div style="text-align:left;" class="twelve columns value-prop">
+          <p>
+            This page serves as a directory for codes related to the above-mentioned
+            manuscript. Please write us on GitHub or at lars.gebraad@erdw.ethz.ch for any
+            questions relating the manuscript or the codes.
+          </p>
+          <p>
+            The M1 chip produced by Apple has proven a capable and power-efficient alternative to mainstream Intel and
+            AMD x86 processors in everyday tasks. Additionally, the unified design integrating the central
+            processing and graphics processing unit, have allowed these M1 chips to excel at many tasks with heavy
+            graphical requirements without the need for a discrete graphical processing unit (GPU), and in some cases
+            even outperforming discrete GPUs.
+          </p>
+          <p>
+            In this work, we show how the M1 chips can be leveraged using the Metal Shading Language (MSL) to accelerate
+            typical array operations in C++. More importantly, we show how MSL avoids the typical complexity of CUDA or
+            OpenACC memory management, by allowing the central processing unit (CPU) and GPU to work in unified memory.
+            We demonstrate how performant the M1 chips is on standard 1D and 2D array operations, with respect to serial
+            and
+            OpenMP accelerated CPU code. We specific operations tested on are introduce increasingly more low-level
+            instructions, from simple element-wise addition to computing finite difference stencils. The
+            reduced complexity of MSL also allows us to accelerate an existing elastic
+            wave equation solver (originally based on OpenMP accelerated C++) using MSL, with minimal effort, while
+            retaining
+            all CPU and OpenMP functionality.
+          </p>
+          <p>
+            The resulting performance gain of simulating the wave equation is near an order of magnitude for specific
+            settings. This gain attained from
+            using MSL is similar to other GPU-accelerated wave-propagation codes with respect to their CPU variants, but
+            does not
+            come at much increased programming complexity that prohibits the typical scientific programmer to leverage
+            these accelerators. This result shows how unified processing units can be a valuable tool to seismologists
+            and computational scientists in general, lowering the bar to writing performant codes
+            that levarage modern GPUs.
+          </p>
+        </div>
+      </div>
+
+
     </section>
 
 
